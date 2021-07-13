@@ -1,2 +1,2 @@
 # WeatherApp
-Weather App that uses Tomorrow.io API
+Weather App that uses OpenWeatherMap API
