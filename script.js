@@ -20,6 +20,8 @@
 //     })
 // })
 
+// const { response } = require("express");
+
 
 
 let weather = {
@@ -33,7 +35,19 @@ let weather = {
             + "&units=metric&appid="
             + this.apiKey
         ).then((response) => response.json())
-        .then((data) => this.displayWeather(data));
+        .then((data) => this.displayWeather(data))
+        .catch(err => {
+            let locationErr = document.querySelector(".location-error-text")
+            locationErr.style.height = "auto"
+            locationErr.style.visibility = "visible"
+            locationErr.style.transform = "translateY(0px)"
+
+            setTimeout(function() {
+                // locationErr.style.height = "0"
+                locationErr.style.visibility = "hidden"
+                locationErr.style.transform = "translateY(-60px)"
+            }, 3000)
+        })
     },
     fetchWeatherByCoords: function() {
         fetch(

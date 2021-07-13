@@ -29,6 +29,7 @@ body {
     
     border-radius: 20px;
     
+    /* background: linear-gradient(to bottom right, rgba(248, 245, 245, 0.7)28%, rgb(11, 30, 201)); */
     background-color: rgba(228, 222, 222, 0.925);
     box-shadow: 0px 5px 10px rgb(17, 17, 17);
 }
@@ -152,10 +153,27 @@ body {
 .search-input-container button ion-icon {
     color: rgb(32, 30, 30);
 }
+.location-error-text {
+    height: auto;
+    visibility: hidden;
+    transform: translateY(-30px);
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: rgb(231, 81, 81);
+
+    transition: .3s ease-in-out;
+    z-index: -1;
+}
+
+.location-error-text p {
+    color: #fff;
+    font-size: 13px;
+}
 
 .tomorrowio-link {
-    position: absolute;
-    bottom: 20px;
+    /* position: absolute; */
+    margin-top: 60px;
     color: #fff;
     font-size: 13px;
 }
