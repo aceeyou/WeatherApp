@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<link rel="icon" href="images/cloud.png">
+
+<!-- <script defer async
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUxqwjIBe2Z-w4Xjd8VOTXMm0Go29mnHw&libraries=places&callback=initMap">
+</script> -->
+<script defer src="script.js"></script>
+
+<title>Weather App</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Weather App</h1>
+            <div class="look-up">
+                <div class="icon">
+                    <!-- <ion-icon name="rainy-outline" class="rainy-icon"></ion-icon> -->
+                    <img src="" alt="" id="weather-icon">
+                </div>
+                <div class="look-up-info"> 
+                    <p id="location"></p> 
+                    <p id="temp"></p>
+                </div>
+            </div>
+            <div class="description">
+                <p id="description"></p>
+            </div>
+        </div>
+        <div class="general-info">
+            <div class="detail">
+                <div class="title">Wind</div>
+                <div class="value wind-speed"><ion-icon name="leaf" class="leaf-icon detail-icon"></ion-icon></div>
+            </div>
+            <div class="detail">
+                <div class="title">Humidity</div>
+                <div class="value humidity"><ion-icon name="water" class="water-icon detail-icon"></ion-icon></div>
+            </div>
+            <div class="detail">
+                <div class="title">Feels Like</div>
+                <div class="value feels_like"><ion-icon name="thermometer-outline"></ion-icon></div>
+            </div>
+        </div>
+    </div>
+    <div class="search-input-container">
+        <input type="text" class="search-input" data-city-search placeholder="Enter Location" autocomplete="false">
+        <button id="search-btn" onclick="getInput()"><ion-icon class="s-btn" name="search-circle"></ion-icon></button>
+    </div>
+
+    <div class="tomorrowio-link">
+        <a href="https://openweathermap.org/">Powered by OpenWeatherMap</a>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

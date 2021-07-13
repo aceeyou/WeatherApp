@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgb(29, 27, 27);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    max-width: 330px;
+
+    height: 280px;
+    
+    border-radius: 20px;
+    
+    background-color: rgba(228, 222, 222, 0.925);
+    box-shadow: 0px 5px 10px rgb(17, 17, 17);
+}
+
+.container .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .header h1 {
+    color: rgb(29, 28, 28);
+}
+
+.container .header .look-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 8px; */
+    transform: translateX(-8px);
+}
+
+
+.container .header .look-up ion-icon {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.container .header .look-up img {
+    width: 50px;
+    margin-right: 5px;
+}
+
+.container .header .look-up .look-up-info {
+    display: flex;
+}
+
+.container .header .look-up .look-up-info p {
+    font-size: 18px;
+}
+
+.container .general-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.container .general-info .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 5px 8px;
+    border-radius: 10px;
+
+    background-color: rgb(238, 232, 232);
+    box-shadow: 0px 2px 5px rgb(180, 176, 176);
+
+    transition: 0.3s ease-in-out;
+}
+
+.container .general-info .detail:hover {
+    transform: scale(1.035);
+}
+
+.container .general-info .detail .title {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.container .general-info .detail .value {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+
+.container #description {
+    font-weight: 600;
+    font-style: italic;
+}
+
+.search-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.search-input-container input {
+    width: 220px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 5px 10px 5px 0;
+    text-indent: 10px;
+    font-weight: 600;
+}
+
+.search-input-container button {
+    outline: none;
+    border: none;
+    background: none;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.search-input-container button,
+.search-input-container button ion-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.search-input-container button ion-icon {
+    color: rgb(32, 30, 30);
+}
+
+.tomorrowio-link {
+    position: absolute;
+    bottom: 20px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.tomorrowio-link a{
+    color: white;
+    text-decoration: none;
+    transition: 0.25s ease-in-out;
+}
+
+.tomorrowio-link a:hover {
+    color: rgb(241, 36, 241);
+}
+
+
+.leaf-icon {
+    color: rgb(28, 189, 100);
+}
+
+.water-icon {
+    color: rgb(37, 114, 201);
+}
+
+.detail-icon {
+    margin-left: 5px;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        height: 400px;
+    }
+
+    .container .general-info {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .container .general-info .detail {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        height: 40px;
+        padding: 5px 20px;
+        margin-bottom: 10px;
+    }
+
+    .container .general-info .detail:nth-child(3) {
+        margin-bottom: 0px;
+    }
+
+    /* .container .general-info .detail .title {
+        margin-right: 50px;
+    } */
+}
